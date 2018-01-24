@@ -4,7 +4,21 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+
+(function(win,doc){
+  //浏览器缩放时触发的事件
+  win.onresize=function(){
+    changeFontSize();
+  };
+  changeFontSize();
+  function changeFontSize(){
+    var oFontSize=doc.documentElement.clientWidth/(320/20);
+    doc.documentElement.style.fontSize=oFontSize+'px';
+  }
+})(window,document);
+
 
 /* eslint-disable no-new */
 new Vue({
@@ -12,4 +26,4 @@ new Vue({
   router,
   components: { App },
   template: '<App/>'
-})
+});
