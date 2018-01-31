@@ -1,6 +1,7 @@
 <template>
     <div class="">
         DIY-audio项目
+        <div class="box"></div>
     </div>
 </template>
 
@@ -49,6 +50,14 @@
 </script>
 
 <style lang="less" scoped>
-  
+  @import "../../static/base/base.less";
+  .box{
+    width: 100/@base;
+    height: 200/@base;
+    background: red;
+    /*width: 100px;*/
+    /*height:100px;*/
+    /*background-color: red;*/
+  }
 </style>
 
