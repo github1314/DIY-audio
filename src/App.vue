@@ -11,8 +11,7 @@ export default {
 }
 </script>
 
-<style>
-#app {
-
-}
+<style lang="less">
+  @import "../static/base/base.less";
+  @import "../static/iconfont/iconfont.css";
 </style>
