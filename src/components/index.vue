@@ -2,11 +2,15 @@
     <div class="index">
         <div class="index-header">
           <i class="iconfont icon-iconset0195"></i>
-          <span>我的</span>
-          <span>发现</span>
+          <router-link to="my" tag="span" active-class="active">我的</router-link>
+          <router-link to="find" tag="span" active-class="active">发现</router-link>
           <i class="iconfont icon-sousuo"></i>
         </div>
-        <div class="index-content"></div>
+        <div class="index-content">
+          <div class="">
+            <router-view></router-view>
+          </div>
+        </div>
         <control_Bar class="control_Bar"></control_Bar>
     </div>
 </template>
@@ -63,19 +67,28 @@
     background-color: #F7F7F7;
     position: relative;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
     .index-header{
       width: 100%;
       height: 80/@base;
       position: relative;
+      /*top:0;*/
+      /*left:0;*/
       text-align: center;
       line-height:80/@base;
       border-bottom: 1px solid #9FA2A0;
+
+      .active{
+        color: #ED3833;
+      }
       &>i:nth-child(1){
         position: absolute;
         left: 25/@base;
         font-weight:bold;
         color: #000;
-        font-size:28/@base;
+        font-size:35/@base;
       }
       &>span{
         font-size:28/@base;
@@ -85,17 +98,24 @@
         right:25/@base;
         font-weight:bold;
         color: #000;
-        font-size:28/@base;
+        font-size:45/@base;
       }
     }
     .index-content{
       width: 100%;
-      height:300px;
+      height:100vh-(180/@base);
+      flex-grow:1 ;
+      overflow: hidden;
+      &>div{
+        width: 100%;
+        height:100%;
+        overflow: auto;
+      }
     }
     .control_Bar{
-      position:absolute;
-      left:0;
-      bottom:0;
+      position:relative;
+      /*left:0;*/
+      /*bottom:0;*/
     }
   }
 </style>

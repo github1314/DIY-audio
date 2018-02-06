@@ -1,15 +1,24 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import index from '@/components/index'
+import Vue from 'vue';
+import Router from 'vue-router';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
       path: '/',
       name: 'index',
-      component: index
+      component: resolve=>{require(['@/components/index'],resolve)},
+      children:[
+        {
+          path:'my',
+          component:resolve=>{require(['@/components/contentBar/my/my'],resolve)}
+        },
+        {
+          path:'find',
+          component:resolve=>{require(['@/components/contentBar/find/find'],resolve)}
+        }
+      ]
     }
-  ]
-})
+]
+});
