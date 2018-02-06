@@ -1,43 +1,35 @@
 <template>
-    <div class="">
-        我是我的页面
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
+    <div class="my">
+        <div class="my_header">
+          <!--头部信息-->
+            <div>
+                <div class="l_f clearfix">
+                  <img src="../../../assets/img/my/touxiang.jpg" alt="">
+                </div>
+                <div class="p_r l_f clearfix" >
+                  <p>RaceTime</p>
+                  <p>尚未开通特权</p>
+                  <button class="p_a">
+                    开通
+                  </button>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div class="my_menu">
+          <!--列表-->
+
+        </div>
+        <div class="my_songSheet">
+          <!--自建歌单-->
+
+        </div>
+        <div class="my_recommend">
+          <!--为你推荐-->
+
+        </div>
     </div>
 </template>
 
@@ -86,6 +78,59 @@
 </script>
 
 <style lang="less" scoped>
+  @import "../../../../static/base/base";
+.my{
+  //头部信息
+  .my_header{
+    width: 100%;
+    height:200/@base;
+    background-color: #fff;
+    margin-top: 37/@base;
+    &>div:nth-child(1){
+      padding-top: 25/@base;
 
+      &>div:nth-child(1){
+        padding-left: 35/@base;
+        img{
+          width: 80/@base;
+          height: 80/@base;
+        }
+      }
+      &>div:nth-child(2){
+        padding-left: 35/@base;
+        padding-top: 15/@base;
+      }
+
+    }
+    &>div:nth-child(2){
+
+      buttom{
+        top:0;
+        right:10px;
+      }
+    }
+  }
+  //列表
+  .my_menu{
+    width:100%;
+    height:300/@base;
+    margin-top: 37/@base;
+    background-color: #fff;
+  }
+  //自建歌单
+  .my_songSheet{
+    width: 100%;
+    height:300/@base;
+    margin-top: 37/@base;
+    background-color: #fff;
+  }
+  //为你推荐
+  .my_recommend{
+    width: 100%;
+    height:400/@base;
+    margin-top: 37/@base;
+    background-color: #fff;
+  }
+}
 </style>
 
